@@ -6,9 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" ExcludeAssets="runtime" ReferenceOutputAssembly="false" Private="true" />
         <Reference Include="Assembly-CSharp" HintPath="$(REFERENCES_PATH)\Assembly-CSharp-Publicized.dll"/>
         <Reference Include="Assembly-CSharp-firstpass" HintPath="$(REFERENCES_PATH)\Assembly-CSharp-firstpass.dll" Private="false"/>
-        <Reference Include="Mirror" HintPath="$(REFERENCES_PATH)\Mirror-Publicized.dll" Private="false"/>
+        <Reference Include="Mirror" HintPath="$(REFERENCES_PATH)\Mirror.dll" Private="false" Publicize="true"/>
         <Reference Include="UnityEngine.CoreModule" HintPath="$(REFERENCES_PATH)\UnityEngine.CoreModule.dll" Private="false"/>
         <Reference Include="UnityEngine.PhysicsModule" HintPath="$(REFERENCES_PATH)\UnityEngine.PhysicsModule.dll" Private="false"/>
         <Reference Include="CommandSystem.Core" HintPath="$(REFERENCES_PATH)\CommandSystem.Core.dll" Private="false"/>
