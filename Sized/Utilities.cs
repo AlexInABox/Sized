@@ -1,7 +1,6 @@
-using LabApi.Features.Enums;
 using LabApi.Features.Wrappers;
-using Mirror;
 using UnityEngine;
+using MEC;
 
 namespace Sized;
 
@@ -9,9 +8,7 @@ public static class Utilities
 {
     public static void SetScale(this Player player, Vector3 scale)
     {
-        player.ReferenceHub.transform.localScale = scale;
-        foreach (Player target in Player.GetAll(PlayerSearchFlags.AuthenticatedPlayers))
-            NetworkServer.SendSpawnMessage(player.ReferenceHub.networkIdentity, target.Connection);
+        Timing.CallDelayed(Timing.WaitForOneFrame, () => player.Scale = scale);
     }
 
     public static Vector3 GetRandomScale()

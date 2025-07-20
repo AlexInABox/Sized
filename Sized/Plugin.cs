@@ -15,7 +15,7 @@ public class Plugin : Plugin<Config>
         "A terrible plugin for SCP:SL using the LabAPI framework that gives each player a random size between two specified values at the start of the round and persists it until the round ends. ";
 
     public override string Author { get; } = "AlexInABox";
-    public override Version Version { get; } = new(1, 0, 0);
+    public override Version Version { get; } = new(1, 1, 0);
     public override Version RequiredApiVersion { get; } = new(LabApiProperties.CompiledVersion);
     public Translation Translation { get; private set; }
 
